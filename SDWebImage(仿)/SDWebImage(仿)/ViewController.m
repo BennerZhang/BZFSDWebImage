@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "BZDownloadOperation.h"
+
 
 @interface ViewController ()
+
+@property (nonatomic,strong)NSOperationQueue *queue;
 
 @end
 
@@ -17,6 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //准备队列
+    NSOperationQueue *queue = [NSOperationQueue new];
+    
+    //创建自定义操作
+    BZDownloadOperation *op = [BZDownloadOperation new];
+    
+    
+    //加入队列
+    [queue addOperation:op];
+    
+    
 }
 
 

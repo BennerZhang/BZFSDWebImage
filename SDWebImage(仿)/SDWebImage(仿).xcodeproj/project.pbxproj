@@ -13,6 +13,7 @@
 		661D47281EFCFFA00075CA2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661D47261EFCFFA00075CA2F /* Main.storyboard */; };
 		661D472A1EFCFFA00075CA2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661D47291EFCFFA00075CA2F /* Assets.xcassets */; };
 		661D472D1EFCFFA00075CA2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661D472B1EFCFFA00075CA2F /* LaunchScreen.storyboard */; };
+		661D473A1EFD34360075CA2F /* BZDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D47391EFD34360075CA2F /* BZDownloadOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		661D47291EFCFFA00075CA2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		661D472C1EFCFFA00075CA2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		661D472E1EFCFFA00075CA2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		661D47381EFD34360075CA2F /* BZDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZDownloadOperation.h; sourceTree = "<group>"; };
+		661D47391EFD34360075CA2F /* BZDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZDownloadOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 				661D47211EFCFFA00075CA2F /* AppDelegate.m */,
 				661D47231EFCFFA00075CA2F /* ViewController.h */,
 				661D47241EFCFFA00075CA2F /* ViewController.m */,
+				661D473B1EFD34400075CA2F /* BZFSDWebImage */,
 				661D47261EFCFFA00075CA2F /* Main.storyboard */,
 				661D47291EFCFFA00075CA2F /* Assets.xcassets */,
 				661D472B1EFCFFA00075CA2F /* LaunchScreen.storyboard */,
@@ -77,6 +81,15 @@
 				661D471E1EFCFFA00075CA2F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		661D473B1EFD34400075CA2F /* BZFSDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				661D47381EFD34360075CA2F /* BZDownloadOperation.h */,
+				661D47391EFD34360075CA2F /* BZDownloadOperation.m */,
+			);
+			name = BZFSDWebImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +118,7 @@
 		661D47121EFCFFA00075CA2F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BZ;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = zzx;
 				TargetAttributes = {
@@ -151,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				661D47251EFCFFA00075CA2F /* ViewController.m in Sources */,
+				661D473A1EFD34360075CA2F /* BZDownloadOperation.m in Sources */,
 				661D47221EFCFFA00075CA2F /* AppDelegate.m in Sources */,
 				661D471F1EFCFFA00075CA2F /* main.m in Sources */,
 			);
@@ -309,6 +324,7 @@
 				661D47331EFCFFA00075CA2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
