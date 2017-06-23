@@ -62,9 +62,21 @@
     [NSThread sleepForTimeInterval:1];
     
     
+    if (self.isCancelled == YES) {
+        
+        NSLog(@"取消");
+        
+        return ;
+        
+    }
+    
+    
+    
+    
     if (self.finishBlock != nil) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             
+          
             self.finishBlock(image);
             
         }];

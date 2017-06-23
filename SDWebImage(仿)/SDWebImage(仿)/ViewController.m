@@ -20,6 +20,12 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 
+//操作缓存池
+@property (nonatomic ,strong)NSMutableDictionary *opDictionary;
+
+//记录上一次的图片地址
+@property (nonatomic,copy)NSString *lastString;
+
 
 @end
 
@@ -31,6 +37,9 @@
     
     //准备队列
     self.queue = [NSOperationQueue new];
+    
+    //实例化缓存池
+    self.opDictionary = [[NSMutableDictionary alloc]init];
     
     
     [self loadData];
@@ -48,12 +57,39 @@
     //获取随机的模型
     BZAppModel *model = self.appList[random];
     
+    //判断图片是否和上次相同
+    if (![model.icon isEqualToString:_lastString] && _lastString != nil) {
+        
+        BZDownloadOperation *lastop = [self.opDictionary objectForKey:_lastString];
+        
+        [lastop cancel];
+        
+        //取消操作,需要从操作缓存池中移除
+        [self.opDictionary removeObjectForKey:_lastString];
+    }
+    
+    
+    //记录上一次图片的地址
+    _lastString = model.icon;
+    
+    //获取图片地址
     //创建自定义操作
     BZDownloadOperation *op = [BZDownloadOperation downloadOperaionWithURLString:model.icon finished:^(UIImage *image) {
         
         self.iconImage.image = image;
         
+        //图片下载完成后 移除对应的操作
+        [self.opDictionary removeObjectForKey:model.icon];
+        
+        
     }];
+    
+    
+    //添加到操作缓存池
+    [self.opDictionary setObject:op forKey:model.icon];
+    
+    
+    
     
     //加入队列
     [self.queue addOperation:op];
