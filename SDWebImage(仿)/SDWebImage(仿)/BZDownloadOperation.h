@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 @interface BZDownloadOperation : NSOperation
 
 
-
-
++(instancetype)downloadOperaionWithURLString:(NSString *)URLString finished:(void(^)(UIImage *image))finishedBlock;
 
 @end
