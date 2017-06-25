@@ -16,7 +16,7 @@
 @property (nonatomic ,strong)NSMutableDictionary *opDictionary;
 
 //图片缓存
-@property (nonatomic ,strong)NSMutableDictionary *imageMemCache;
+@property (nonatomic ,strong)NSCache *imageMemCache;
 
 @end
 
@@ -50,7 +50,7 @@
         
         self.opDictionary = [NSMutableDictionary new];
         
-        self.imageMemCache = [NSMutableDictionary new];
+        self.imageMemCache = [NSCache new];
         
     }
     

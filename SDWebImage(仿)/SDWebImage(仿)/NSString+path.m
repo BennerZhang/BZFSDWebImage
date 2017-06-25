@@ -7,6 +7,7 @@
 //
 
 #import "NSString+path.h"
+#import "NSString+Hash.h"
 
 @implementation NSString (path)
 
@@ -17,7 +18,7 @@
     NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).lastObject;
     
     //获取文件缓存的名字
-    NSString *name = [self lastPathComponent];
+    NSString *name = [self md5String];
     
     //cachePath和naem名字对接
     NSString *filePath = [cachePath stringByAppendingPathComponent:name];

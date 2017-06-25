@@ -68,9 +68,10 @@
         
     }
     
-    [NSThread sleepForTimeInterval:1];
-    
-    
+//    模拟网速慢
+//    [NSThread sleepForTimeInterval:1];
+//    
+//    
     if (self.isCancelled == YES) {
         
         NSLog(@"取消");
