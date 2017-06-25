@@ -11,6 +11,8 @@
 #import "AFNetworking.h"
 #import "YYModel.h"
 #import "BZAppModel.h"
+#import "BZWebImageManager.h"
+
 
 @interface ViewController ()
 
@@ -72,27 +74,13 @@
     //记录上一次图片的地址
     _lastString = model.icon;
     
-    //获取图片地址
-    //创建自定义操作
-    BZDownloadOperation *op = [BZDownloadOperation downloadOperaionWithURLString:model.icon finished:^(UIImage *image) {
-        
+   
+    [[BZWebImageManager sharedManager] downloadOperaionWithURLString:model.icon completionBlock:^(UIImage *image) {
+       
         self.iconImage.image = image;
-        
-        //图片下载完成后 移除对应的操作
-        [self.opDictionary removeObjectForKey:model.icon];
-        
         
     }];
     
-    
-    //添加到操作缓存池
-    [self.opDictionary setObject:op forKey:model.icon];
-    
-    
-    
-    
-    //加入队列
-    [self.queue addOperation:op];
     
 }
 

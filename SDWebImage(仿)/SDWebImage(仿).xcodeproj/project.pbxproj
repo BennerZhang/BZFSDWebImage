@@ -39,6 +39,7 @@
 		661D47891EFD3CAD0075CA2F /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D476F1EFD3CAD0075CA2F /* NSObject+YYModel.m */; };
 		661D478A1EFD3CAD0075CA2F /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D47711EFD3CAD0075CA2F /* YYClassInfo.m */; };
 		661D478D1EFD3D170075CA2F /* BZAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D478C1EFD3D170075CA2F /* BZAppModel.m */; };
+		661D480F1EFFD3C50075CA2F /* BZWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D480E1EFFD3C50075CA2F /* BZWebImageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,8 @@
 		661D47721EFD3CAD0075CA2F /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		661D478B1EFD3D170075CA2F /* BZAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZAppModel.h; sourceTree = "<group>"; };
 		661D478C1EFD3D170075CA2F /* BZAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZAppModel.m; sourceTree = "<group>"; };
+		661D480D1EFFD3C50075CA2F /* BZWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZWebImageManager.h; sourceTree = "<group>"; };
+		661D480E1EFFD3C50075CA2F /* BZWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZWebImageManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 			children = (
 				661D47381EFD34360075CA2F /* BZDownloadOperation.h */,
 				661D47391EFD34360075CA2F /* BZDownloadOperation.m */,
+				661D480D1EFFD3C50075CA2F /* BZWebImageManager.h */,
+				661D480E1EFFD3C50075CA2F /* BZWebImageManager.m */,
 			);
 			name = BZFSDWebImage;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				661D47801EFD3CAD0075CA2F /* SDWebImageManager.m in Sources */,
 				661D47251EFCFFA00075CA2F /* ViewController.m in Sources */,
 				661D473A1EFD34360075CA2F /* BZDownloadOperation.m in Sources */,
+				661D480F1EFFD3C50075CA2F /* BZWebImageManager.m in Sources */,
 				661D478D1EFD3D170075CA2F /* BZAppModel.m in Sources */,
 				661D47871EFD3CAD0075CA2F /* UIImageView+WebCache.m in Sources */,
 				661D477C1EFD3CAD0075CA2F /* SDWebImageCompat.m in Sources */,
@@ -475,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "SDWebImage(仿)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ios.zzx.com.SDWebImage---";
@@ -486,6 +493,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "SDWebImage(仿)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ios.zzx.com.SDWebImage---";
