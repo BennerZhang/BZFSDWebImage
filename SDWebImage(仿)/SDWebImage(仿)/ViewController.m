@@ -62,12 +62,8 @@
     //判断图片是否和上次相同
     if (![model.icon isEqualToString:_lastString] && _lastString != nil) {
         
-        BZDownloadOperation *lastop = [self.opDictionary objectForKey:_lastString];
+        [[BZWebImageManager sharedManager]cancelLastOperation:_lastString];
         
-        [lastop cancel];
-        
-        //取消操作,需要从操作缓存池中移除
-        [self.opDictionary removeObjectForKey:_lastString];
     }
     
     

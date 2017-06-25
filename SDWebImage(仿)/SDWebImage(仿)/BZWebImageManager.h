@@ -19,4 +19,7 @@
 - (void)downloadOperaionWithURLString:(NSString *)URLString completionBlock:(void(^)(UIImage *image))completionBlock;
 
 
+//设置取消的点击中的下载
+- (void)cancelLastOperation:(NSString *)lastOperation;
+
 @end

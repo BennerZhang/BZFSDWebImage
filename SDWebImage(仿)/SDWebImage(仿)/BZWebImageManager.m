@@ -95,6 +95,19 @@
 }
 
 
+//设置取消的点击中的下载
+- (void)cancelLastOperation:(NSString *)lastOperation
+{
+    
+    //取出
+    BZDownloadOperation *lastOp = [self.opDictionary objectForKey:lastOperation];
+    
+    [lastOp cancel];
+    
+    [self.opDictionary removeObjectForKey:lastOperation];
+    
+}
+
 
 
 @end
