@@ -40,6 +40,7 @@
 		661D478A1EFD3CAD0075CA2F /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D47711EFD3CAD0075CA2F /* YYClassInfo.m */; };
 		661D478D1EFD3D170075CA2F /* BZAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D478C1EFD3D170075CA2F /* BZAppModel.m */; };
 		661D480F1EFFD3C50075CA2F /* BZWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D480E1EFFD3C50075CA2F /* BZWebImageManager.m */; };
+		661D48121EFFDB030075CA2F /* NSString+path.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D48111EFFDB030075CA2F /* NSString+path.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,8 @@
 		661D478C1EFD3D170075CA2F /* BZAppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZAppModel.m; sourceTree = "<group>"; };
 		661D480D1EFFD3C50075CA2F /* BZWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BZWebImageManager.h; sourceTree = "<group>"; };
 		661D480E1EFFD3C50075CA2F /* BZWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZWebImageManager.m; sourceTree = "<group>"; };
+		661D48101EFFDB030075CA2F /* NSString+path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+path.h"; sourceTree = "<group>"; };
+		661D48111EFFDB030075CA2F /* NSString+path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+path.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 				661D47391EFD34360075CA2F /* BZDownloadOperation.m */,
 				661D480D1EFFD3C50075CA2F /* BZWebImageManager.h */,
 				661D480E1EFFD3C50075CA2F /* BZWebImageManager.m */,
+				661D48101EFFDB030075CA2F /* NSString+path.h */,
+				661D48111EFFDB030075CA2F /* NSString+path.m */,
 			);
 			name = BZFSDWebImage;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				661D47811EFD3CAD0075CA2F /* SDWebImagePrefetcher.m in Sources */,
 				661D47801EFD3CAD0075CA2F /* SDWebImageManager.m in Sources */,
 				661D47251EFCFFA00075CA2F /* ViewController.m in Sources */,
+				661D48121EFFDB030075CA2F /* NSString+path.m in Sources */,
 				661D473A1EFD34360075CA2F /* BZDownloadOperation.m in Sources */,
 				661D480F1EFFD3C50075CA2F /* BZWebImageManager.m in Sources */,
 				661D478D1EFD3D170075CA2F /* BZAppModel.m in Sources */,

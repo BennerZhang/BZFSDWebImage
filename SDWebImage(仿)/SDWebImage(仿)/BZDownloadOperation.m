@@ -59,6 +59,15 @@
     
     UIImage *image = [UIImage imageWithData:data];
     
+    
+    //实现沙盒缓存
+    if(image != nil)
+    {
+        
+        [data writeToFile:[self.URLString appendCachePath] atomically:YES];
+        
+    }
+    
     [NSThread sleepForTimeInterval:1];
     
     
@@ -70,13 +79,10 @@
         
     }
     
-    
-    
-    
     if (self.finishBlock != nil) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             
-          
+            NSLog(@"完成");
             self.finishBlock(image);
             
         }];

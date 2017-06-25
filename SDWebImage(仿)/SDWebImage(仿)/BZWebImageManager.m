@@ -15,6 +15,9 @@
 //操作缓存池
 @property (nonatomic ,strong)NSMutableDictionary *opDictionary;
 
+//图片缓存
+@property (nonatomic ,strong)NSMutableDictionary *imageMemCache;
+
 @end
 
 @implementation BZWebImageManager
@@ -47,6 +50,8 @@
         
         self.opDictionary = [NSMutableDictionary new];
         
+        self.imageMemCache = [NSMutableDictionary new];
+        
     }
     
     return self;
@@ -59,6 +64,18 @@
 //设置单例下载
 - (void)downloadOperaionWithURLString:(NSString *)URLString completionBlock:(void(^)(UIImage *image))completionBlock
 {
+    //在下载图片前,判断是否有缓存
+    if ([self chackCache:URLString]) {
+        
+        if (completionBlock != nil) {
+            
+            completionBlock([self.imageMemCache objectForKey:URLString]);
+            
+            return;
+        }
+        
+    }
+    
     
     if ([self.opDictionary objectForKey:URLString] != nil) {
         
@@ -77,6 +94,15 @@
             completionBlock(image);
             
         }
+        
+        //实现缓存
+        if(image != nil)
+        {
+            
+            [self.imageMemCache setObject:image forKey:URLString];
+            
+        }
+        
         
         //图片下载完成后 移除对应的操作
         [self.opDictionary removeObjectForKey:URLString];
@@ -108,6 +134,36 @@
     
 }
 
+
+//是否有缓存的主方法
+- (BOOL)chackCache:(NSString *)URLString
+{
+    //判断是否在内存中缓存
+    if ([self.imageMemCache objectForKey:URLString] )
+    {
+        NSLog(@"从内存中加载");
+        return YES;
+    
+    }
+    
+    //判断是否在沙盒中缓存
+    UIImage *cacheImage = [UIImage imageWithContentsOfFile:[URLString appendCachePath]];
+    
+    if ( cacheImage != nil)
+    {
+        
+        NSLog(@"从沙盒中加载");
+        
+        [self.imageMemCache setObject:cacheImage forKey:URLString];
+        
+        return YES;
+        
+    }
+    
+    return NO;
+    
+    
+}
 
 
 @end
