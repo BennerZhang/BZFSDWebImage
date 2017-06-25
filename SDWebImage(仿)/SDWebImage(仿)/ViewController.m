@@ -7,11 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "BZDownloadOperation.h"
 #import "AFNetworking.h"
 #import "YYModel.h"
 #import "BZAppModel.h"
-#import "BZWebImageManager.h"
+#import "UIImageView+WebImageView.h"
 
 
 @interface ViewController ()
@@ -59,23 +58,8 @@
     //获取随机的模型
     BZAppModel *model = self.appList[random];
     
-    //判断图片是否和上次相同
-    if (![model.icon isEqualToString:_lastString] && _lastString != nil) {
-        
-        [[BZWebImageManager sharedManager]cancelLastOperation:_lastString];
-        
-    }
-    
-    
-    //记录上一次图片的地址
-    _lastString = model.icon;
-    
+    [self.iconImage bzsd_setImageWithURLString:model.icon];
    
-    [[BZWebImageManager sharedManager] downloadOperaionWithURLString:model.icon completionBlock:^(UIImage *image) {
-       
-        self.iconImage.image = image;
-        
-    }];
     
     
 }

@@ -41,6 +41,7 @@
 		661D478D1EFD3D170075CA2F /* BZAppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D478C1EFD3D170075CA2F /* BZAppModel.m */; };
 		661D480F1EFFD3C50075CA2F /* BZWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D480E1EFFD3C50075CA2F /* BZWebImageManager.m */; };
 		661D48121EFFDB030075CA2F /* NSString+path.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D48111EFFDB030075CA2F /* NSString+path.m */; };
+		661D48151EFFE3750075CA2F /* UIImageView+WebImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 661D48141EFFE3750075CA2F /* UIImageView+WebImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,8 @@
 		661D480E1EFFD3C50075CA2F /* BZWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BZWebImageManager.m; sourceTree = "<group>"; };
 		661D48101EFFDB030075CA2F /* NSString+path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+path.h"; sourceTree = "<group>"; };
 		661D48111EFFDB030075CA2F /* NSString+path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+path.m"; sourceTree = "<group>"; };
+		661D48131EFFE3750075CA2F /* UIImageView+WebImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImageView.h"; sourceTree = "<group>"; };
+		661D48141EFFE3750075CA2F /* UIImageView+WebImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImageView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,8 @@
 				661D480E1EFFD3C50075CA2F /* BZWebImageManager.m */,
 				661D48101EFFDB030075CA2F /* NSString+path.h */,
 				661D48111EFFDB030075CA2F /* NSString+path.m */,
+				661D48131EFFE3750075CA2F /* UIImageView+WebImageView.h */,
+				661D48141EFFE3750075CA2F /* UIImageView+WebImageView.m */,
 			);
 			name = BZFSDWebImage;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				661D47781EFD3CAD0075CA2F /* AFURLSessionManager.m in Sources */,
 				661D47221EFCFFA00075CA2F /* AppDelegate.m in Sources */,
 				661D478A1EFD3CAD0075CA2F /* YYClassInfo.m in Sources */,
+				661D48151EFFE3750075CA2F /* UIImageView+WebImageView.m in Sources */,
 				661D47741EFD3CAD0075CA2F /* AFNetworkReachabilityManager.m in Sources */,
 				661D47861EFD3CAD0075CA2F /* UIImageView+HighlightedWebCache.m in Sources */,
 				661D471F1EFCFFA00075CA2F /* main.m in Sources */,
